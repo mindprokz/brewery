@@ -20,15 +20,18 @@
   <body>
     <section id="menu">
       <div class="container">
+        <nav class="mobile_menu">
+          <div class="wrap"><a href="#" class="anchor">О нас</a><a href="#" class="anchor">Интерьер</a><a href="#" class="anchor">Меню</a><a href="#" class="anchor">Акции</a><a href="#" class="anchor">Отзывы</a><a href="#" class="anchor">Контакты</a><a href="#">Все рестораны</a></div>
+        </nav>
         <div class="social"><a href="#"><img src="images/inst.png" class="insta"></a><a href="#"><img src="images/facebook.png" class="facebook"></a><a href="#"><img src="images/mail.png" class="mail"></a></div>
         <div class="lang"><a href="#">RU</a><a href="#">EN</a><a href="#">KZ</a></div>
-        <nav class="left"><a href="http://test.com">О нас</a><a href="#">Интерьер</a><a href="#">Меню</a></nav>
-        <nav class="right"><a href="#">Акции</a><a href="#">Отзывы</a><a href="#">Контакты</a></nav>
+        <nav class="left"><a href="#" class="anchor">О нас</a><a href="#" class="anchor">Интерьер</a><a href="#" class="anchor">Меню</a></nav>
+        <nav class="right"><a href="#" class="anchor">Акции</a><a href="#" class="anchor">Отзывы</a><a href="#" class="anchor">Контакты</a></nav>
         <picture class="logo">
-          <source srcset="images/logo_desktop.jpg" media="(min-width: 970px)">
-          <source srcset="images/logo_tablet.jpg" media="(min-width: 750px)">
-          <source srcset="images/logo_mobile.jpg" media="(min-width: 1px)"><img src="images/logo_desktop">
-        </picture>
+          <source srcset="images/logo_desktop.png" media="(min-width: 970px)">
+          <source srcset="images/logo_tablet.png" media="(min-width: 750px)">
+          <source srcset="images/logo_mobile.png" media="(min-width: 1px)"><img src="images/logo_desktop.png">
+        </picture><img src="images/buter.png" class="burger">
       </div>
     </section>
     <section id="main">
@@ -39,12 +42,24 @@
         <source srcset="images/main_bg_tabletvert.jpg" media="(min-width: 750px)">
         <source srcset="images/main_bg_mobile.jpg" media="(min-width: 1px)"><img srcset="images/main_bg.jpg">
       </picture>
-      <div class="container"><img src="images/scroll.png" class="bottom_link"></div>
+      <div class="container">
+        <picture class="slogan">
+          <source srcset="images/slogan_desktop.png" media="(min-width: 1560px)">
+          <source srcset="images/slogan_laptop.png" media="(min-width: 1170px)">
+          <source srcset="images/slogan_tablet.png" media="(min-width: 970px)">
+          <source srcset="images/slogan_tabletvert.png" media="(min-width: 750px)">
+          <source srcset="images/slogan_mobile.png" media="(min-width: 1px)"><img srcset="images/slogan_desktop.png">
+        </picture><img src="images/scroll.png" class="bottom_link">
+      </div>
     </section>
     <section id="about">
-      <div class="container"><img src="images/log.png" class="shape">
-        <h3>О ресторане</h3>
-        <p>Изысканность и гармоничная утонченность – слова, как нельзя лучше подходящие для описания ресторана «Kiku Matsuri». Современный дизайн и сдержанный японский минимализм создают уникальность интерьера.</p><a herf="#" class="video_link">Посмотреть видео</a>
+      <div class="container">
+        <p>Изысканность и гармоничная утонченность – слова, как нельзя лучше подходящие для описания ресторана «Kiku Matsuri». Современный дизайн и сдержанный японский минимализм создают уникальность интерьера.</p>
+        <p>Лучшие опытные технологи из Германии и Чехии участвуют в организации производства и достижении совершенства живого продукта. Оригинальное немецкое оборудование и сырье для производства, закупаемое только в Германии, позволяет сохранить все традиции качества и вкуса этого чудесного напитка.</p><a herf="#" class="video_link">Посмотреть видео</a>
+        <picture>
+          <source srcset="images/about_desktop.png" media="(min-width: 750px)">
+          <source srcset="images/about_mobile.png" media="(min-width: 1px)"><img src="">
+        </picture>
       </div>
     </section>
     <section id="interior">
@@ -107,20 +122,23 @@
         <div class="trapvisor"><a href="#"><img src="images/review_trap.png"></a><a href="#"><img src="images/review_trapreview.jpg"></a></div>
       </div>
     </section>
-    <section id="map"></section>
-    <section id="footer">
-      <div class="container">
-        <p class="text">Мы искренне будем рады видеть Вас и надеемся, что каждое посещение нашего ресторана будет для Вас новым наслаждением и изысканным ритуалом.</p>
-        <div class="adress">
-          <p>Астана, пр. Туран, 30<br> здание Fitness Palace</p><a href="#" class="mail">kikumatsuri@mail.ru</a>
-        </div>
-        <div class="numbers">
-          <div class="num">+7 (7172) <b>56-77-33</b></div>
-          <div class="num">+7 775 <b>793-17-06</b></div>
-          <div class="work">РЕЖИМ РАБОТЫ: ежедневно с 12:00 до 01:00</div>
-        </div>
+    <section id="map">
+      <h2>Наши контанты</h2>
+      <div class="adress">
+        <p>Астана, проспект Туран, 30 (здание Fitness Palace) <br> Режим работы: ежедневно 12:00-01:00, без выходных</p>
+        <div class="num">+7 7172 56 77 11, +7 702 888 11 59</div><a href="mailto:brewery_astana@mail.ru" class="mail">brewery_astana@mail.ru</a>
       </div>
     </section>
+    <section id="fix_menu" class="opened">
+      <div class="container"><a href="#"><img src="images/logo_fix.png" class="logo"></a>
+        <nav><a href="#" class="anchor">О нас</a><a href="#" class="anchor">Интерьер</a><a href="#" class="anchor">Меню</a><a href="#" class="anchor">Акции</a><a href="#" class="anchor">Отзывы</a><a href="#" class="anchor">Контакты</a></nav>
+        <div class="social"><a href="#"><img src="images/inst.png" class="insta"></a><a href="#"><img src="images/facebook.png" class="facebook"></a><a href="#"><img src="images/mail.png" class="mail"></a></div>
+        <div class="lang"><a href="#">RU</a><a href="#">EN</a><a href="#">KZ</a></div>
+      </div>
+    </section>
+    <section id="footer">
+      <div class="container"><span>© 2016 Brewery</span></div>
+    </section><a href="http://satgroup.kz"><img src="images/rest_but.png" class="all_rest"></a>
     <script src="https://api-maps.yandex.ru/2.1/?lang=tr_TR" type="text/javascript"></script>
     <script src="libs/jquery/dist/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.2/picturefill.min.js"></script>

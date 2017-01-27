@@ -1,5 +1,5 @@
 #menu_rest {
-  background: #f9f9f9;
+  background: url('images/menu_text.jpg');
   text-align: center;
   padding-top: 50px;
   padding-bottom: 140px;
@@ -16,9 +16,13 @@
   }
 
   .sl_menu {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+
     .slide {
       position: relative;
       overflow: hidden;
+      padding-bottom: 85px;
       border-radius: 15px;
 
       img {
@@ -36,7 +40,7 @@
         color: #5c2800;
         font-size: 20px;
         bottom: 0;
-        background: rgba(#fff, 0.5);
+        background: url('images/texture_menu_header.jpg');
       }
     }
   }

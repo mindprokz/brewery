@@ -1,7 +1,8 @@
 #main {
   position: relative;
+  background: url('images/menu_text.jpg');
 
-  picture {
+  picture:not(.slogan) {
     position: relative;
     width: 100%;
 
@@ -10,14 +11,21 @@
     }
   }
 
+  .slogan {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   .bottom_link {
     position: absolute;
-    bottom: 185px;
+    bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
 
     @media (max-width: 750px) {
-      bottom: 50px;
+      bottom: 25px;
     }
   }
 }

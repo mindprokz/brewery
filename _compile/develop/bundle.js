@@ -74,25 +74,18 @@
 	  adaptiveHeight: true
 	});
 
-	// ymaps.ready(init);
-	// var myMap,
-	//   myPlacemark;
-	//
-	// function init(){
-	//   myMap = new ymaps.Map("map", {
-	//     center: [55.76, 37.64],
-	//     zoom: 7
-	//   });
-	//
-	//   myMap.behaviors.disable(['drag','scrollZoom']);
-	//
-	//   myPlacemark = new ymaps.Placemark([55.76, 37.64], {
-	//     hintContent: 'Москва!',
-	//     balloonContent: 'Столица России'
-	//   });
-	//
-	//   myMap.geoObjects.add(myPlacemark);
-	// }
+	// fancybox
+	$(".fancybox").click(function () {
+	  $(".fancybox").fancybox({
+	    openEffect: 'fade',
+	    closeEffect: 'elastic'
+	  });
+	});
+
+	$(document).on('click', 'a.anchor', function () {
+	  $('html, body').animate({ scrollTop: $('a[name="' + this.hash.slice(1) + '"]').offset().top - 152 }, 1000);
+	  return false;
+	});
 
 /***/ },
 /* 1 */

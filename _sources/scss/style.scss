@@ -26,6 +26,10 @@ body {
   @include container($container);
 }
 
+.fancybox-skin {
+  padding: 0 !important;
+}
+
 @import
   'sections/menu',
   'sections/fix_menu',

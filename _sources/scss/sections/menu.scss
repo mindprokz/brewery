@@ -37,7 +37,8 @@
       display: block;
 
       a {
-        font-size: 14px;
+        font-size: 12px;
+        font-weight: 700;
       }
     }
 
@@ -46,15 +47,26 @@
 
       a {
         font-size: 18px;
+        font-weight: 700;
+      }
+    }
+
+    @media (min-width: 970px) {
+      width: 310px;
+
+      a {
+        font-size: 14px;
+        font-weight: 700;
       }
     }
 
     @media (min-width: 1170px) {
       width: 430px;
+      font-size: 18px;
     }
 
     a {
-      font-family: 'Philosopher', sans-serif;
+      font-family: 'Open Sans', sans-serif;
       display: inline-block;
       width: 33.3333%;
       text-align: center;
@@ -79,8 +91,9 @@
   .lang {
     position: absolute;
     top: 6px;
-    font-family: 'Philosopher', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     right: 100px;
+    font-weight: 700;
 
     a {
       padding-left: 10px;
@@ -102,11 +115,11 @@
     }
 
     @media (min-width: 970px) {
-      right: 200px;
+      right: 188px;
     }
 
     @media (min-width: 1170px) {
-      right: 295px;
+      right: 288px;
     }
   }
 
@@ -117,17 +130,25 @@
 
     @media (min-width: 750px) {
       top: 14px;
-      left: 25px;
+      right: 8px;
+      left: unset;
     }
 
     @media (min-width: 970px) {
-      left: unset;
       right: 15px;
     }
 
     a {
       padding-left: 5px;
       padding-right: 5px;
+    }
+
+    .mail {
+      display: none;
+
+      @media (min-width: 970px) {
+        display: inline;
+      }
     }
   }
 
@@ -176,6 +197,36 @@
 
     @media (max-width: 750px) {
       display: table;
+    }
+  }
+
+  .num {
+    display: none;
+    position: absolute;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    left: 38px;
+    background: #5c2800;
+    color: #fff;
+    font-weight: 700;
+
+    img {
+      vertical-align: text-top;
+      margin-right: 12px;
+    }
+
+    @media (min-width: 750px) {
+      display: block;
+    }
+
+    @media (min-width: 970px) {
+      left: 77px;
+    }
+
+    @media (min-width: 1170px) {
+      left: 177px;
     }
   }
 }

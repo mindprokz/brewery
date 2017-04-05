@@ -1,3 +1,24 @@
+// lang vars
+case process.env.NODE_ENV
+  when 'ru'
+    - var slogan_desktop = 'images/slogan_desktop.png'
+    - var slogan_laptop = 'images/slogan_laptop.png'
+    - var slogan_tablet = 'images/slogan_tablet.png'
+    - var slogan_tabletvert = 'images/slogan_tabletvert.png'
+    - var slogan_mobile = 'images/slogan_mobile.png'
+  when 'kz'
+    - var slogan_desktop = 'images/slogan_desktop_kz.png'
+    - var slogan_laptop = 'images/slogan_laptop_kz.png'
+    - var slogan_tablet = 'images/slogan_tablet_kz.png'
+    - var slogan_tabletvert = 'images/slogan_tabletvert_kz.png'
+    - var slogan_mobile = 'images/slogan_mobile_kz.png'
+  when 'eng'
+    - var slogan_desktop = 'images/slogan_desktop_eng.png'
+    - var slogan_laptop = 'images/slogan_laptop_eng.png'
+    - var slogan_tablet = 'images/slogan_tablet_eng.png'
+    - var slogan_tabletvert = 'images/slogan_tabletvert_eng.png'
+    - var slogan_mobile = 'images/slogan_mobile_eng.png'
+
 section#main
   a(name="top")
   picture
@@ -8,10 +29,10 @@ section#main
     img(srcset="images/main_bg_desktop.jpg")
   .container
     picture.slogan
-      source(srcset="images/slogan_desktop.png" media="(min-width: 1560px)")
-      source(srcset="images/slogan_laptop.png" media="(min-width: 1170px)")
-      source(srcset="images/slogan_tablet.png" media="(min-width: 970px)")
-      source(srcset="images/slogan_tabletvert.png" media="(min-width: 750px)")
-      source(srcset="images/slogan_mobile.png" media="(min-width: 1px)")
+      source(srcset=`${slogan_desktop}` media="(min-width: 1560px)")
+      source(srcset=`${slogan_laptop}` media="(min-width: 1170px)")
+      source(srcset=`${slogan_tablet}` media="(min-width: 970px)")
+      source(srcset=`${slogan_tabletvert}` media="(min-width: 750px)")
+      source(srcset=`${slogan_mobile}` media="(min-width: 1px)")
       img(srcset="images/slogan_desktop.png")
     img(src="images/scroll.png").bottom_link

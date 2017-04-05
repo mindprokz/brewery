@@ -33,9 +33,9 @@
     left: 130px;
 
     a {
-      font-family: 'Philosopher', sans-serif;
+      font-family: 'Open Sans', sans-serif;
       color: #1d1d1d;
-      font-size: 18px;
+      font-size: 15px;
       text-transform: uppercase;
       text-decoration: none;
       padding-left: 16px;
@@ -51,7 +51,7 @@
   .lang {
     position: absolute;
     top: 15px;
-    font-family: 'Philosopher', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     right: 15px;
 
     a {
@@ -76,6 +76,23 @@
     @media (min-width: 1170px) {
       top: 50px;
       right: 15px;
+    }
+  }
+
+  .num {
+    position: absolute;
+    top: 0;
+    left: 145px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: #5c2800;
+    color: #fff;
+
+    img {
+      vertical-align: text-top;
+      margin-right: 15px;
     }
   }
 

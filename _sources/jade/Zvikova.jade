@@ -1,0 +1,16 @@
+// lang vars
+case process.env.NODE_ENV
+  when 'ru'
+    - var text = 'Легкость и свежесть фильтрованного чешского светлого пива с приятным дрожжевым ароматом и еле заметной горчинкой никого не оставит равнодушным. Это пиво с первым же глотком погрузит Вас в атмосферу гостеприимства и веселья.'
+  when 'kz'
+    - var text = 'Сүзгіден өткізілген, жеңіл, әрі жаңадан әзірленген, ашықтының жағымды дәмі бар чех сырасы кез келген адамға ұнайтыны анық. Сусын сіздерді бір ұрттағаннан-ақ қонақжай және көңілді ортаға жетелейді.'
+  when 'eng'
+    - var text = 'Lightness and freshness of filtered Czech bitter beer with pleasant barm aroma and slightly captured bitterness touches everybody’s feelings. The very first gargle of this beer will catch you up to the atmosphere of hospitality and fun.'
+
+doctype html
+html(lang="ru-Ru")
+  head
+    include sections/header.jade
+  body.iframe_beer
+    h3 ZVIKOVA FILTERED
+    p #{text}

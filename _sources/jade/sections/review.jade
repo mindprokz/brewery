@@ -1,23 +1,61 @@
+// lang vars
+case process.env.NODE_ENV
+  when 'ru'
+    - var head = 'Ознакомьтесь с отзывами'
+    - var subhead = 'наших гостей на сайте TripAdvisor'
+    - var comment_head_1 = 'Хорошо'
+    - var comment_text_1 = 'По-моему все лучшие рестораны Астаны расположены рядом с брендовыми гостиницами. Там и вышколенный персонал и кухня на уровне. Уютная пивоварня, с собственным свежесваренным и очень неплохим пивом.'
+    - var comment_head_2 = 'Для любителей пива и не только'
+    - var comment_text_2 = 'Очень приличное заведение.Главное-хорошее Пиво.Возьмите пивной сет на пробу,выберете свое.Просторно,уютно,по вечерам неплохая живая музыка (в какие дни не знаю)'
+    - var comment_head_3 = 'Дорого, но люблю его!'
+    - var comment_text_3 = 'Нравится тем, что внутри очень много места, в том числе отдельные залы с караоке. Можно танцевать на танцполе. А можно сидеть поодаль, и музыка не будет мешать. Прекрасный дизайн интерьера, отличная, хоть и дорогая кухня.'
+    - var comment_head_4 = 'Отмечал день рождения'
+    - var comment_text_4 = 'Хорошее весёлое место с живой музыкой. Зал поделен на разные зоны. Кухня хорошая, но ничего сверх естественного. Место позиционирует как пивной ресторан и даже предлагает четыре вида немецкого пива. Но пиво на любителя. В целом оценка 4 из 5'
+    - var review = 'Больше отзывов на сайте — '
+  when 'eng'
+    - var head = 'Read the comments of'
+    - var subhead = 'our guests at TripAdvisor'
+    - var comment_head_1 = 'Good'
+    - var comment_text_1 = 'In my opinion all the best restaurants of Astana are placed next to brand hotels. There are well-trained staff and cuisine on a good level. Comfortable brew-house with own freshly brewed and pretty good beer.'
+    - var comment_head_2 = 'For beer fans, but not only'
+    - var comment_text_2 = 'Very respectable establishment. The main thing – good beer. Take a beer flight just to taste, chose yours. Spacious, comfortable, not bad life music in the evening (do not know which days exactly) '
+    - var comment_head_3 = 'Expensive, but love it!'
+    - var comment_text_3 = 'I like it that there is plenty of room inside, including parlors with karaoke. You may dance on dance-floor. But you may also set at some distance and music will not interfere. Gorgeous design of interior, perfect, but expensive cuisine.'
+    - var comment_head_4 = 'Celebrated birthday party'
+    - var comment_text_4 = 'Good funny place with life music. The hall is divided into sections. Good cuisine, but nothing extraordinary. This place describes itself as beer restaurant and offers four types of German beer. But this beer is specific. I give 4 out of 5.'
+    - var review = 'More comments at — '
+  when 'kz'
+    - var head = 'TripAdvisor сайтындағы біздің'
+    - var subhead = 'қонақтардың пікіріне зер салыңыз'
+    - var comment_head_1 = 'Жақсы'
+    - var comment_text_1 = 'Меніңше, Астананың ең жақсы деген мейрамханалары танымал қонақ үйлердің маңында орналасқан. Қызметкерлері іріктеуден өткен, асханалары да көңілден шығады. Жеке сыра қайнататын орны ыңғайлы, әрі сырасы да жаман емес.'
+    - var comment_head_2 = 'Сыраны жақсы көретіндер үшін'
+    - var comment_text_2 = 'Өте қолайлы жер. Ең бастысы – Сырасы жақсы.  Дәмін көру үшін сыра сетін алсаңыз, ұнағанын таңдайсыз. Іші кең, тартымды, кешке қарай жанды музыка ойнап тұрады (нақты қай күндері екенін білмеймін).'
+    - var comment_head_3 = 'Бағасы қымбат, бірақ өзіме ұнайды!'
+    - var comment_text_3 = 'Ішінде отыратын орын көп, караокесімен жеке залдары бар. Би алаңында билеуге болады. Музыка кедергі жасамасын десең, шеткі орындарды таңдауға болады. Интерьердің дизайны талғамға сай, бағасы қымбат болғанымен, барлығы керемет.'
+    - var comment_head_4 = 'Туған күнімді атап өткенмін'
+    - var comment_text_4 = 'Жанды музыка ойнап тұратын көңілді орын. Зал бірнеше бөлікке бөлінген. Асханасы жақсы, бірақ басқалардан керемет айырмашылығы жоқ. Бұл жерді сыра мейрамханасы ретінде танып қалдық, тіпті неміс сырасының төрт түрі ұсынылған. Жалпы бағасы 5-пен есептегенде 4.'
+    - var review = 'Cайтында пікірлер саны көп '
 section#review
   a(name="review")
   .container
-    h2 Ознакомьтесь с отзывами
-    h3 наших гостей на сайте TripAdvisor
+    h2 #{head}
+    h3 #{subhead}
     ul
       li
-        h4: span Отличная казахская Еда!
-        p Ужин в отдельной комнате - чудесный опыт, каждое блюдо было просто восхитительным и хорошо обставлен. Определенно вернемся!
+        h4: span #{comment_head_1}
+        p #{comment_text_1}
       li
-        h4: span Просто отличный
-        p Отличная атмосфера, красивое место, хорошее оформление. Какое восхитительное место! Extraordinairy дружелюбный и профессиональный персонал и еда была просто восхитительным.
+        h4: span #{comment_head_2}
+        p #{comment_text_2}
       li
-        h4: span Очень хороший ресторан
-        p Приятная атмосфера, хорошая еда, живет традиционная музыка. Персонал говорит на английском языке. Очень удобно для бизнеса или для удовольствия.
+        h4: span #{comment_head_3}
+        p #{comment_text_3}
       li
-        h4: span Традиционная и вкусная еда
-        p Мы приехали сюда на традиционной еды, а не высокого класса западных тематических ресторанов, и мы не разочарованы.
-    h3
-      span Больше отзывов на сайте — 
+        h4: span #{comment_head_4}
+        p #{comment_text_4}
+    h3.review_trap
+      span #{review}
       a(href="http://www.tripadvisor.ru" target="_blank") www.tripadvisor.ru
     .trapvisor
   .trapvisor

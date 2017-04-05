@@ -1,4 +1,5 @@
 import FloatMenu from './floatMenu.js';
+import initFeed from './modal_feed'
 
 new FloatMenu().mobileClicker(
   document.querySelector('.burger'),
@@ -29,7 +30,7 @@ $('.sl_stocks').slick({
 $(".fancybox").click(function() {
 	$(".fancybox").fancybox({
 		openEffect: 'fade',
-		closeEffect: 'elastic'
+		closeEffect: 'fade'
 	});
 });
 
@@ -37,3 +38,5 @@ $(document).on('click', 'a.anchor', function () {
   $('html, body').animate({ scrollTop:  $('a[name="'+this.hash.slice(1)+'"]').offset().top - 152 }, 1000 );
   return false;
 });
+
+initFeed();

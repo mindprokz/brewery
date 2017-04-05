@@ -16,6 +16,7 @@ body {
   @media (max-width: 480px) {
     width: 480px;
   }
+  font-family: 'Open Sans', sans-serif;
 }
 
 .container-float {
@@ -40,4 +41,6 @@ body {
   'sections/stocks',
   'sections/review',
   'sections/map',
-  'sections/footer';
+  'sections/footer',
+  'sections/iframe',
+  'sections/feedback_modal';

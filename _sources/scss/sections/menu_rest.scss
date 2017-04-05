@@ -7,10 +7,16 @@
   padding-right: 15px;
   box-sizing: border-box;
 
+  .container {
+    @media (min-width: 970px) {
+      width: 800px;
+    }
+  }
+
   h2 {
     text-transform: uppercase;
     color: #5c2800;
-    font-family: 'PT Serif', serif;
+    font-family: 'Open Sans', sans-serif;
     padding-bottom: 60px;
     font-size: 35px;
   }
@@ -22,7 +28,6 @@
     .slide {
       position: relative;
       overflow: hidden;
-      padding-bottom: 85px;
       border-radius: 15px;
 
       img {
@@ -36,9 +41,10 @@
         text-transform: uppercase;
         width: 100%;
         position: absolute;
-        font-family: 'PT Serif', serif;
+        font-family: 'Open Sans', sans-serif;
         color: #5c2800;
-        font-size: 20px;
+        font-size: 15px;
+        font-weight: 700;
         bottom: 0;
         background: url('images/texture_menu_header.jpg');
       }
@@ -50,7 +56,8 @@
     z-index: 2;
     width: 56px;
     height: 62px;
-    background: url('images/left_arr_menu.png') no-repeat center center;
+    background: #bbb url('images/left_arr_menu.png') no-repeat center center;
+    padding: 45px;
     opacity: 0.8;
     transition: opacity 0.3s ease;
 
@@ -67,9 +74,10 @@
     right: 0;
     width: 56px;
     height: 62px;
-    background: url('images/right_arr_menu.png') no-repeat center center;
+    background: #bbb url('images/right_arr_menu.png') no-repeat center center;
     opacity: 0.8;
     transition: opacity 0.3s ease;
+    padding: 45px;
 
     &:hover {
       opacity: 1;

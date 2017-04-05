@@ -1,23 +1,62 @@
+// lang vars
+case process.env.NODE_ENV
+  when 'ru'
+    - var header = 'Меню'
+    - var muss = 'Ванильный мусс'
+    - var mozart = 'Десерт Моцарт'
+    - var medal = 'Медальоны из телятины с картофелем по-деревенски'
+    - var salad = 'салат Гравлакс'
+    - var ugor = 'Салат c теплым угрем'
+    - var horse = 'Филе конины с белыми грибами'
+    - var losose = 'Филе лосося с манго'
+    - var fua = 'Фуа-гра с сахарной ватой'
+  when 'eng'
+    - var header = 'Menu'
+    - var muss = 'Vanilla mousse'
+    - var mozart = 'Mozart Dessert'
+    - var medal = 'Картоп қосылған бұзау етінен Медальондар'
+    - var salad = 'Gravlax salad'
+    - var ugor = 'Salad with warm eel'
+    - var horse = 'Horse meat fillet with porcini mushrooms'
+    - var losose = 'Salmon fillet with mango'
+    - var fua = 'Foie gras with cotton candy'
+  when 'kz'
+    - var header = 'Мәзірі'
+    - var muss = 'Ванильді мусс'
+    - var mozart = 'Моцарт десерті'
+    - var medal = 'Veal medallions with potato wedges'
+    - var salad = 'Гравлакс салаты'
+    - var ugor = 'Жыланбалық қосылған салат'
+    - var horse = 'Ақ саңырауқұлақ қосылған жылқы сүбесі'
+    - var losose = 'Манго қосылған арқан балық еті'
+    - var fua = 'Қант мақтасымен фуа-гра'
+
 section#menu_rest
   a(name="menu")
   .container
-    h2 Меню
+    h2 #{header}
     .sl_menu
       .slide
         img(src="images/dishes/1.jpg")
-        h3 Ванильный мусс
+        h3 #{muss}
       .slide
         img(src="images/dishes/2.jpg")
-        h3 Медальоны из телятины
+        h3 #{mozart}
       .slide
         img(src="images/dishes/3.jpg")
-        h3 салат Гравлакс
+        h3 #{medal}
       .slide
         img(src="images/dishes/4.jpg")
-        h3 Салат c угрем
+        h3 #{salad}
       .slide
         img(src="images/dishes/5.jpg")
-        h3 Филе конины
+        h3 #{ugor}
       .slide
         img(src="images/dishes/6.jpg")
-        h3 Филе лосося
+        h3 #{horse}
+      .slide
+        img(src="images/dishes/7.jpg")
+        h3 #{losose}
+      .slide
+        img(src="images/dishes/8.jpg")
+        h3 #{fua}

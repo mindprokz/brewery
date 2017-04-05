@@ -1,0 +1,16 @@
+// lang vars
+case process.env.NODE_ENV
+  when 'ru'
+    - var text = 'Нефильтрованное, светлое, ячменное пиво для тех, кто умеет ценить непреходящие ценности и наслаждаться каждым моментом жизни'
+  when 'kz'
+    - var text = 'Сүзілмеген, мөлдір, арпа сырасы құндылықтарды және өмірдің әрбір сәтін бағалай білетін жандар үшін әзірленген'
+  when 'eng'
+    - var text = 'Hazy, bitter, barley beer for those who can appreciate enduring values and enjoy each moment of the life'
+
+doctype html
+html(lang="ru-Ru")
+  head
+    include sections/header.jade
+  body.iframe_beer
+    h3 YORK BEER
+    p #{text}

@@ -75,9 +75,11 @@ table {
 .not_visible_mail {
   display: none; }
 
-@media (max-width: 480px) {
-  body {
-    width: 480px; } }
+body {
+  font-family: 'Open Sans', sans-serif; }
+  @media (max-width: 480px) {
+    body {
+      width: 480px; } }
 
 .container-float {
   max-width: 100%;
@@ -131,17 +133,26 @@ table {
         width: 250px;
         display: block; }
         #menu nav:not(.mobile_menu) a {
-          font-size: 14px; } }
+          font-size: 12px;
+          font-weight: 700; } }
     @media (min-width: 970px) {
       #menu nav:not(.mobile_menu) {
         width: 310px; }
         #menu nav:not(.mobile_menu) a {
-          font-size: 18px; } }
+          font-size: 18px;
+          font-weight: 700; } }
+    @media (min-width: 970px) {
+      #menu nav:not(.mobile_menu) {
+        width: 310px; }
+        #menu nav:not(.mobile_menu) a {
+          font-size: 14px;
+          font-weight: 700; } }
     @media (min-width: 1170px) {
       #menu nav:not(.mobile_menu) {
-        width: 430px; } }
+        width: 430px;
+        font-size: 18px; } }
     #menu nav:not(.mobile_menu) a {
-      font-family: 'Philosopher', sans-serif;
+      font-family: 'Open Sans', sans-serif;
       display: inline-block;
       width: 33.3333%;
       text-align: center;
@@ -159,8 +170,9 @@ table {
   #menu .lang {
     position: absolute;
     top: 6px;
-    font-family: 'Philosopher', sans-serif;
-    right: 100px; }
+    font-family: 'Open Sans', sans-serif;
+    right: 100px;
+    font-weight: 700; }
     #menu .lang a {
       padding-left: 10px;
       padding-right: 10px;
@@ -177,10 +189,10 @@ table {
           padding-bottom: 0; } }
     @media (min-width: 970px) {
       #menu .lang {
-        right: 200px; } }
+        right: 188px; } }
     @media (min-width: 1170px) {
       #menu .lang {
-        right: 295px; } }
+        right: 288px; } }
   #menu .social {
     position: absolute;
     top: 33px;
@@ -188,14 +200,19 @@ table {
     @media (min-width: 750px) {
       #menu .social {
         top: 14px;
-        left: 25px; } }
+        right: 8px;
+        left: unset; } }
     @media (min-width: 970px) {
       #menu .social {
-        left: unset;
         right: 15px; } }
     #menu .social a {
       padding-left: 5px;
       padding-right: 5px; }
+    #menu .social .mail {
+      display: none; }
+      @media (min-width: 970px) {
+        #menu .social .mail {
+          display: inline; } }
   #menu .burger {
     display: none;
     position: absolute;
@@ -231,6 +248,29 @@ table {
     @media (max-width: 750px) {
       #menu .mobile_menu.open {
         display: table; } }
+  #menu .num {
+    display: none;
+    position: absolute;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    left: 38px;
+    background: #5c2800;
+    color: #fff;
+    font-weight: 700; }
+    #menu .num img {
+      vertical-align: text-top;
+      margin-right: 12px; }
+    @media (min-width: 750px) {
+      #menu .num {
+        display: block; } }
+    @media (min-width: 970px) {
+      #menu .num {
+        left: 77px; } }
+    @media (min-width: 1170px) {
+      #menu .num {
+        left: 177px; } }
 
 #fix_menu {
   position: fixed;
@@ -259,9 +299,9 @@ table {
     top: 50px;
     left: 130px; }
     #fix_menu nav a {
-      font-family: 'Philosopher', sans-serif;
+      font-family: 'Open Sans', sans-serif;
       color: #1d1d1d;
-      font-size: 18px;
+      font-size: 15px;
       text-transform: uppercase;
       text-decoration: none;
       padding-left: 16px;
@@ -273,7 +313,7 @@ table {
   #fix_menu .lang {
     position: absolute;
     top: 15px;
-    font-family: 'Philosopher', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     right: 15px; }
     #fix_menu .lang a {
       padding-left: 10px;
@@ -292,6 +332,19 @@ table {
       #fix_menu .social {
         top: 50px;
         right: 15px; } }
+  #fix_menu .num {
+    position: absolute;
+    top: 0;
+    left: 145px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: #5c2800;
+    color: #fff; }
+    #fix_menu .num img {
+      vertical-align: text-top;
+      margin-right: 15px; }
   @media (max-width: 750px) {
     #fix_menu {
       display: none; } }
@@ -322,14 +375,14 @@ table {
   text-align: center;
   padding-top: 40px;
   padding-bottom: 50px;
-  background: url("images/menu_text.jpg");
+  background: url("images/texture_about.jpg");
   overflow-x: hidden; }
   @media (min-width: 970px) {
     #about {
       padding-top: 70px;
-      padding-bottom: 90px; } }
+      padding-bottom: 60px; } }
   #about p {
-    font-family: Arial;
+    font-family: 'Open Sans', sans-serif;
     color: #2b2b2b;
     font-size: 15px;
     width: 100%;
@@ -343,23 +396,59 @@ table {
         width: 585px;
         padding-left: 0;
         padding-right: 0;
-        font-size: 18px; } }
-  #about .video_link {
-    color: #5c2800;
-    font-family: 'PT Serif', serif;
-    border-bottom: 1px solid;
-    text-transform: uppercase;
-    text-decoration: none;
-    cursor: pointer;
-    font-weight: 300; }
-  #about picture {
-    display: block;
+        font-size: 17px;
+        line-height: 22pt; } }
+  #about .type_beer {
     width: 100%;
-    margin-top: 50px;
-    text-align: center; }
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box; }
+    #about .type_beer .video_button {
+      background: #471a00;
+      border-radius: 5px;
+      width: 150px;
+      height: 45px;
+      text-transform: uppercase;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 15px auto 0;
+      text-decoration: none; }
+    #about .type_beer .left {
+      margin-top: 45px;
+      padding-bottom: 45px; }
+    #about .type_beer .beer_modal {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 20px;
+      color: #471a00;
+      float: left;
+      width: 23%;
+      margin-left: 2%; }
+    #about .type_beer picture {
+      display: block;
+      width: 172px;
+      height: 140px;
+      margin: auto;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+      box-sizing: border-box;
+      padding-top: 20px; }
+      #about .type_beer picture img {
+        position: absolute;
+        left: -110px; }
+        @media (min-width: 750px) {
+          #about .type_beer picture img {
+            left: -192px; } }
+      @media (min-width: 750px) {
+        #about .type_beer picture {
+          padding-top: 0;
+          height: 120px; } }
     @media (min-width: 750px) {
-      #about picture {
-        padding-left: 30px; } }
+      #about .type_beer {
+        width: 750px; } }
 
 #interior {
   width: 100%;
@@ -373,11 +462,11 @@ table {
       padding-bottom: 0;
       background: none; } }
   #interior .slick-prev {
-    left: 0;
+    left: 50px;
     z-index: 2;
     width: 56px;
     height: 62px;
-    background: url("images/left_arr_interior.png") no-repeat center center;
+    background: url("images/left_arr_menu.png") no-repeat center center;
     opacity: 0.8;
     transition: opacity 0.3s ease; }
     #interior .slick-prev:hover {
@@ -385,10 +474,10 @@ table {
     #interior .slick-prev::before {
       content: ''; }
   #interior .slick-next {
-    right: 0;
+    right: 50px;
     width: 56px;
     height: 62px;
-    background: url("images/right_arr_interior.png") no-repeat center center;
+    background: url("images/right_arr_menu.png") no-repeat center center;
     opacity: 0.8;
     transition: opacity 0.3s ease; }
     #interior .slick-next:hover {
@@ -438,10 +527,13 @@ table {
   padding-left: 15px;
   padding-right: 15px;
   box-sizing: border-box; }
+  @media (min-width: 970px) {
+    #menu_rest .container {
+      width: 800px; } }
   #menu_rest h2 {
     text-transform: uppercase;
     color: #5c2800;
-    font-family: 'PT Serif', serif;
+    font-family: 'Open Sans', sans-serif;
     padding-bottom: 60px;
     font-size: 35px; }
   #menu_rest .sl_menu {
@@ -450,7 +542,6 @@ table {
     #menu_rest .sl_menu .slide {
       position: relative;
       overflow: hidden;
-      padding-bottom: 85px;
       border-radius: 15px; }
       #menu_rest .sl_menu .slide img {
         width: 100%; }
@@ -461,9 +552,10 @@ table {
         text-transform: uppercase;
         width: 100%;
         position: absolute;
-        font-family: 'PT Serif', serif;
+        font-family: 'Open Sans', sans-serif;
         color: #5c2800;
-        font-size: 20px;
+        font-size: 15px;
+        font-weight: 700;
         bottom: 0;
         background: url("images/texture_menu_header.jpg"); }
   #menu_rest .slick-prev {
@@ -471,7 +563,8 @@ table {
     z-index: 2;
     width: 56px;
     height: 62px;
-    background: url("images/left_arr_menu.png") no-repeat center center;
+    background: #bbb url("images/left_arr_menu.png") no-repeat center center;
+    padding: 45px;
     opacity: 0.8;
     transition: opacity 0.3s ease; }
     #menu_rest .slick-prev:hover {
@@ -482,9 +575,10 @@ table {
     right: 0;
     width: 56px;
     height: 62px;
-    background: url("images/right_arr_menu.png") no-repeat center center;
+    background: #bbb url("images/right_arr_menu.png") no-repeat center center;
     opacity: 0.8;
-    transition: opacity 0.3s ease; }
+    transition: opacity 0.3s ease;
+    padding: 45px; }
     #menu_rest .slick-next:hover {
       opacity: 1; }
     #menu_rest .slick-next::before {
@@ -530,13 +624,13 @@ table {
   #stocks h2 {
     color: #fff;
     text-transform: uppercase;
-    font-family: 'PT Serif', serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 40px;
     text-align: center;
     padding-bottom: 115px; }
   #stocks .sl_stocks .slide {
     text-align: center;
-    font-family: 'PT Serif', serif; }
+    font-family: 'Open Sans', sans-serif; }
     #stocks .sl_stocks .slide h3 {
       color: #fff;
       font-size: 33px;
@@ -639,8 +733,10 @@ table {
       font-weight: 700; }
     #review h3 a {
       color: #5c2800;
-      font-family: 'Philosopher', sans-serif;
+      font-family: 'Open Sans', sans-serif;
       font-style: italic; }
+    #review h3.review_trap {
+      font-size: 20px; }
   #review ul {
     padding-left: 15px;
     padding-right: 15px;
@@ -654,10 +750,13 @@ table {
           width: 50%;
           text-align: left;
           float: left;
-          height: 195px; } }
+          height: 245px; } }
       @media (min-width: 865px) {
         #review ul li {
-          height: 140px; } }
+          height: 270px; } }
+      @media (min-width: 1200px) {
+        #review ul li {
+          height: 165px; } }
       #review ul li h4 {
         color: #5c2800;
         font-size: 20px;
@@ -666,7 +765,7 @@ table {
         #review ul li h4 span {
           border-bottom: 2px solid; }
       #review ul li p {
-        font-family: 'Philosopher', sans-serif;
+        font-family: 'Open Sans', sans-serif;
         font-size: 17px;
         line-height: 25px;
         font-style: italic;
@@ -683,7 +782,7 @@ table {
   overflow: hidden;
   position: relative; }
   #map h2 {
-    font-family: 'PT Serif', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 40px;
     color: #fff;
     text-align: center;
@@ -697,7 +796,7 @@ table {
     #map .adress p,
     #map .adress .num {
       font-weight: 700;
-      font-family: Arial;
+      font-family: 'Open Sans', sans-serif;
       font-size: 17px;
       color: #fff;
       line-height: 30px; }
@@ -711,14 +810,114 @@ table {
   #footer span {
     font-weight: 700;
     color: #fff;
-    font-family: Arial; }
+    font-family: 'Open Sans', sans-serif; }
 
 .all_rest {
   position: fixed;
-  top: 50vh;
-  right: 0;
-  transform: translateY(-50%);
+  bottom: 50px;
+  right: 50px;
   display: none; }
   @media (min-width: 750px) {
     .all_rest {
       display: block; } }
+
+.iframe_beer {
+  padding-top: 0;
+  width: 100%; }
+  .iframe_beer h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px; }
+  .iframe_beer p {
+    font-family: 'Open Sans', sans-serif;
+    padding-left: 65px;
+    padding-right: 65px;
+    line-height: 20pt;
+    text-align: center;
+    box-sizing: border-box; }
+
+.fancybox-inner {
+  background: url("images/menu_text.jpg");
+  min-height: 300px; }
+
+#modal_feedback {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  overflow: hidden; }
+  #modal_feedback.close_modal_feed {
+    display: none; }
+  #modal_feedback .wrap {
+    position: absolute;
+    width: 380px;
+    background: #d5c2a4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+#modal_feedback .modal_feed {
+  position: relative;
+  padding-top: 35px;
+  padding-bottom: 20px; }
+  #modal_feedback .modal_feed img {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    cursor: pointer; }
+  #modal_feedback .modal_feed h2 {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 28px;
+    padding-bottom: 18px; }
+  #modal_feedback .modal_feed .line {
+    margin: auto;
+    background: #613319;
+    height: 2px;
+    width: 100px; }
+  #modal_feedback .modal_feed input[type="text"],
+  #modal_feedback .modal_feed textarea {
+    width: 80%;
+    display: block;
+    margin: 20px auto 0;
+    color: #5a5a5a;
+    border: 1px solid #91846f;
+    background: #d5c2a4;
+    padding: 10px 17px;
+    font-family: 'Philosopher', sans-serif; }
+    #modal_feedback .modal_feed input[type="text"]:active, #modal_feedback .modal_feed input[type="text"]:focus,
+    #modal_feedback .modal_feed textarea:active,
+    #modal_feedback .modal_feed textarea:focus {
+      outline: 0; }
+    #modal_feedback .modal_feed input[type="text"]::-webkit-input-placeholder,
+    #modal_feedback .modal_feed textarea::-webkit-input-placeholder {
+      color: #5a5a5a; }
+    #modal_feedback .modal_feed input[type="text"]::-moz-placeholder,
+    #modal_feedback .modal_feed textarea::-moz-placeholder {
+      color: #5a5a5a; }
+    #modal_feedback .modal_feed input[type="text"]:-moz-placeholder,
+    #modal_feedback .modal_feed textarea:-moz-placeholder {
+      color: #5a5a5a; }
+    #modal_feedback .modal_feed input[type="text"]:-ms-input-placeholder,
+    #modal_feedback .modal_feed textarea:-ms-input-placeholder {
+      color: #5a5a5a; }
+  #modal_feedback .modal_feed textarea {
+    resize: none;
+    min-height: 150px; }
+  #modal_feedback .modal_feed input[type="submit"] {
+    margin-left: 10%;
+    display: block;
+    margin-top: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    background: #613319;
+    width: 150px;
+    height: 40px;
+    border: none; }

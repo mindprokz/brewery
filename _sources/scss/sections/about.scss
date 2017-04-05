@@ -2,16 +2,16 @@
   text-align: center;
   padding-top: 40px;
   padding-bottom: 50px;
-  background: url('images/menu_text.jpg');
+  background: url('images/texture_about.jpg');
   overflow-x: hidden;
 
   @media (min-width: 970px) {
     padding-top: 70px;
-    padding-bottom: 90px;
+    padding-bottom: 60px;
   }
 
   p {
-    font-family: Arial;
+    font-family: 'Open Sans', sans-serif;
     color: #2b2b2b;
     font-size: 15px;
     width: 100%;
@@ -25,28 +25,74 @@
       width: 585px;
       padding-left: 0;
       padding-right: 0;
-      font-size: 18px;
+      font-size: 17px;
+      line-height: 22pt;
     }
   }
 
-  .video_link {
-    color: #5c2800;
-    font-family: 'PT Serif', serif;
-    border-bottom: 1px solid;
-    text-transform: uppercase;
-    text-decoration: none;
-    cursor: pointer;
-    font-weight: 300;
-  }
-
-  picture {
-    display: block;
+  .type_beer {
     width: 100%;
-    margin-top: 50px;
-    text-align: center;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+
+    .video_button {
+      background: #471a00;
+      border-radius: 5px;
+      width: 150px;
+      height: 45px;
+      text-transform: uppercase;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 15px auto 0;
+      text-decoration: none;
+    }
+
+    .left {
+      margin-top: 45px;
+      padding-bottom: 45px;
+    }
+
+    .beer_modal {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 20px;
+      color: #471a00;
+      float: left;
+      width: 23%;
+      margin-left: 2%;
+    }
+
+    picture {
+      display: block;
+      width: 172px;
+      height: 140px;
+      margin: auto;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+      box-sizing: border-box;
+      padding-top: 20px;
+
+      img {
+        position: absolute;
+        left: -110px;
+
+        @media (min-width: 750px) {
+          left: -192px;
+        }
+      }
+
+      @media (min-width: 750px) {
+        padding-top: 0;
+        height: 120px;
+      }
+    }
 
     @media (min-width: 750px) {
-      padding-left: 30px;
+      width: 750px;
     }
   }
 }

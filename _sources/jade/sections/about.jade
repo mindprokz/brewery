@@ -1,10 +1,31 @@
+// lang vars
+case process.env.NODE_ENV
+  when 'ru'
+    - var parag = "Ресторан «Brewery» с собственной пивоварней предлагает гостям <br> 3 основных баварских и 1 специальный чешский сортов пива, сваренных по традиционной технологии и по эксклюзивной рецептуре, разработанной специально для нас <br> потомственным пивоваром."
+    - var parag_2 = "Лучшие опытные технологи из Германии и Чехии участвуют <br> в организации производства и достижении совершенства живого продукта. Оригинальное немецкое оборудование и сырье для производства, закупаемое только в Германии, позволяет сохранить все традиции качества и вкуса этого чудесного напитка"
+    - var button = 'Посмотреть видео'
+  when 'kz'
+    - var parag = "Жеке сыра қайнататын орны бар Brewery мейрамханасы қонақтарға кәнігі сыра қайнатушының әдісімен дәстүрлі технология және ерекше рецептура бойынша арнайы әзірленген негізгі 3 бавар сырасы мен чех сортынан тағы 1 түрін ұсынады."
+    - var parag_2 = "Германия мен Чехияның тәжірибелі үздік технологтары өндірісті ұйымдастыру және нақты (таза өнім) өнім алуға қол жеткізу шараларына атсалысады. Тек Германиядан сатып алынған немістің бірегей құрал-жабдықтары мен өндіріске арналған шикізаты бұл сусынның сапасын, әрі өзіне тән дәмін сақтауға мүмкіндік береді."
+    - var button = 'Бейне қарау'
+  when 'eng'
+    - var parag = "«Brewery» restaurant with own brewery offers 3 main Bavarian and 1 special Czech beer, brewed according to traditional technology with exclusive recipe, specially developed by hereditary cook."
+    - var parag_2 = "Best technologies from Germany and Czechia participate in organization of manufacture and reaching the perfect live product. Original German equipment and raw materials, purchased in Germany, allows saving the traditions of taste and quality of this magnificent drink."
+    - var button = 'Video'
 section#about
   a(name="about")
   .container
-    p Изысканность и гармоничная утонченность – слова, как нельзя лучше подходящие для описания ресторана «Kiku Matsuri». Современный дизайн и сдержанный японский минимализм создают уникальность интерьера.
-    p Лучшие опытные технологи из Германии и Чехии участвуют в организации производства и достижении совершенства живого продукта. Оригинальное немецкое оборудование и сырье для производства, закупаемое только в Германии, позволяет сохранить все традиции качества и вкуса этого чудесного напитка.
-    a(href="https://www.youtube.com/embed/m1JiraUF1M0?autoplay=1" class="fancybox fancybox.iframe").video_link Посмотреть видео
-    picture
-      source(srcset="images/about_desktop.png" media="(min-width: 750px)")
-      source(srcset="images/about_mobile.png" media="(min-width: 1px)")
-      img(src="")
+    p !{parag}
+    p !{parag_2}
+    .type_beer
+      .left
+        a(href="York.html" class="fancybox fancybox.iframe").beer_modal York
+        a(href="Kloster.html" class="fancybox fancybox.iframe").beer_modal Kloster
+        a(href="Weizen.html" class="fancybox fancybox.iframe").beer_modal Weizen
+        a(href="Zvikova.html" class="fancybox fancybox.iframe").beer_modal Zvikova filtered
+      picture
+        source(srcset="images/about_desktop.png" media="(min-width: 750px)")
+        source(srcset="images/about_mobile.png" media="(min-width: 1px)")
+        img(src="")
+      .button_wrap
+        a(href="https://www.youtube.com/embed/woVUvj8WeLA?autoplay=1" class="fancybox fancybox.iframe video_button").video_link #{button}

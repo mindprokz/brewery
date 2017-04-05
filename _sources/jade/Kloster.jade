@@ -1,0 +1,15 @@
+// lang vars
+case process.env.NODE_ENV
+  when 'ru'
+    - var text = 'Нефильтрованное, янтарное, ячменное пиво с ароматной и слегка уловимой горчинкой хмеля и ярко выраженным тоном карамельного солода в послевкусии'
+  when 'kz'
+    - var text = 'Сүзілмеген, ашық сары, хош иісті және құлмақтың ащы дәмі бар, карамелді уыттың түсі анық байқалатын арпа сырасы'
+  when 'eng'
+    - var text = 'Hazy, amber, barley beer with aromatic and slightly captured bitterness of hops and pronounced tint of caramel malt in afterglow'
+doctype html
+html(lang="ru-Ru")
+  head
+    include sections/header.jade
+  body.iframe_beer
+    h3 KLOSTER BEER
+    p #{text}
